@@ -1,6 +1,5 @@
 var playerScore = 0;
 var computerScore = 0;
-
 //return random number between 0-2
 function random() {
   let rand = Math.floor(Math.random() * 3);
@@ -12,16 +11,16 @@ function getComputerChoice() {
   switch (select) {
     case 0:
       console.log("Computer selected Rock");
-      return "ROCK";
+      return "rock";
       break;
     case 1:
       console.log("Computer selected Paper");
 
-      return "PAPER";
+      return "paper";
       break;
     case 2:
       console.log("Computer selected Scissor");
-      return "SCISSOR";
+      return "scissor";
       break;
     default:
       return "Error getComputerChoice";
@@ -29,39 +28,41 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
-  let player = playerSelection.toLowerCase();
-  let computer = computerSelection.toLowerCase();
+  
+  let player = this.id;
+  console.log("You selected "+player[0].toUpperCase()+player.substring(1));
+  let computer = getComputerChoice();
 
   //tie
   if (player === computer) {
-    return "Its a Tie";
+    console.log( "Its a Tie");
   } else if (player === "rock") {
     if (computer === "paper") {
       computerScore++;
-      return "You Lose! Paper beats Rock";
+      console.log("You Lose! Paper beats Rock");
     } else if (computer === "scissor") {
-      userScore++;
-      return "You Win! Rock beats Scissor";
+      playerScore++;
+      console.log("You Win! Rock beats Scissor");
     }
   } else if (player === "paper") {
     if (computer === "scissor") {
       computerScore++;
-      return "You Lose! Scissor beats Paper";
+      console.log("You Lose! Scissor beats Paper");
     } else if (computer === "rock") {
-      userScore++;
-      return "You Win! Paper beats Rock";
+      playerScore++;
+      console.log("You Win! Paper beats Rock");
     }
   } else if (player === "scissor") {
     if (computer === "rock") {
       computerScore++;
-      return "You Lose! Rock beats Scissor";
+      console.log("You Lose! Rock beats Scissor");
     } else if (computer === "paper") {
-      userScore++;
-      return "You Win! scissor beats Paper";
+      playerScore++;
+      console.log("You Win! Scissor beats Paper");
     }
   }
-
-  return "Error playRound() ";
+console.log("\n");
+ // console.log("Error playRound() ");
 }
 
 //const playerSelection = "rock";
@@ -70,7 +71,7 @@ function playRound(playerSelection, computerSelection) {
 
 var gameRounds = 5;
 
-function game() {
+/*function game() {
   for (let rounds = 0; rounds < gameRounds; gameRounds++) {
     //ToDO check userinput
     let playerSelection = prompt("Select between Rock, Paper, Scissor");
@@ -86,7 +87,7 @@ function game() {
     console.log("------------------------------------");
   }
   selectWinner(userScore,computerScore);
-}
+}*/
 
 function checkPlayerInput(playerSelection) {
   switch (playerSelection) {
@@ -117,4 +118,17 @@ function selectWinner(userScore, computerScore) {
     console.log("You Lose! End Score : " + score);
   }
 }
-game();
+//game();
+
+
+
+
+const buttons=document.querySelectorAll("button");
+console.log(buttons);
+
+buttons.forEach(btn => btn.addEventListener('click',playRound));
+
+function test(){
+  console.log(this.id);
+ 
+}

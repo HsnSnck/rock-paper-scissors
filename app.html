@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="./script.js"></script>
-    <link type="stylesheet" href="style.css">
-    <title>Rock Paper Scissors</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="./script.js" defer></script>
+  </head>
+  <title>Rock Paper Scissors</title>
+
+  <body>
+    <div class="container">
+      <div id="title">Rock Paper Scissor</div>
+
+      <div class="main">
+        <button class="btn" id="rock">
+          <img src="./img/rock.png" alt="Rock" />
+        </button>
+        <button class="btn" id="paper">
+          <img src="./img/paper.png" alt="Paper" />
+        </button>
+        <button class="btn" id="scissor">
+          <img src="./img/scissor.png" alt="Scissor" />
+        </button>
+      </div>
+      <div class="scoreboard">
+        <div>Player</div>
+        <div id="playerScore"></div>
+        <div>Computer</div>
+        <div id="computerScore"></div>
+      </div>
+    </div>
+  </body>
 </html>
