@@ -5,23 +5,19 @@ function random() {
   let rand = Math.floor(Math.random() * 3);
   return rand;
 }
-
 function getComputerChoice() {
   let select = random();
   switch (select) {
     case 0:
       console.log("Computer selected Rock");
       return "rock";
-      break;
     case 1:
       console.log("Computer selected Paper");
 
       return "paper";
-      break;
     case 2:
       console.log("Computer selected Scissor");
       return "scissor";
-      break;
     default:
       return "Error getComputerChoice";
   }
@@ -64,12 +60,6 @@ function playRound(playerSelection, computerSelection) {
 console.log("\n");
  // console.log("Error playRound() ");
 }
-
-//const playerSelection = "rock";
-//const computerSelection = getComputerChoice();
-//console.log(playRound(playerSelection, computerSelection));
-
-var gameRounds = 5;
 
 /*function game() {
   for (let rounds = 0; rounds < gameRounds; gameRounds++) {

@@ -8,14 +8,24 @@
     <link rel="stylesheet" href="style.css" />
     <script type="text/javascript" src="./script.js" defer></script>
   </head>
-  <title>Rock Paper Scissors</title>
+  <title>Rock Paper Scissors Game</title>
 
   <body>
     <div class="container">
-      <div id="title">Rock Paper Scissor</div>
-
-      <div class="main">
-        <button class="btn" id="rock">
+    <header>
+      <h1>Rock Paper Scissors</h1>
+    </header>
+    <div class="score-board">
+      <div id="player-label" class="badge">Player</div>
+      <span id="player-score">0</span>:<span id="computer-score">0</span>
+      <div id="computer-label" class="badge">Computer</div>
+    </div>
+    <div class="result">
+      <p>Make your move</p>
+    </div>
+    <div class="choices">
+      
+      <button class="btn" id="rock">
           <img src="./img/rock.png" alt="Rock" />
         </button>
         <button class="btn" id="paper">
@@ -24,13 +34,11 @@
         <button class="btn" id="scissor">
           <img src="./img/scissor.png" alt="Scissor" />
         </button>
-      </div>
-      <div class="scoreboard">
-        <div>Player</div>
-        <div id="playerScore"></div>
-        <div>Computer</div>
-        <div id="computerScore"></div>
-      </div>
     </div>
+    <div>
+      <p>Reach 5 points to win!</p>
+    </div>
+  </div>
+
   </body>
 </html>
