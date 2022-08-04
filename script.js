@@ -23,6 +23,9 @@ function restartGame(){
   cScore.textContent=`${computerScore}`;
   pScore.textContent=`${playerScore}`;
   modelcontainer.classList.remove("show-modal")
+  const result=document.querySelector(".result>p");
+  result.textContent="Make your move";
+  
 }
 
 function random() {
