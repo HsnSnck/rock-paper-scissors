@@ -64,13 +64,13 @@ function addPoints(winner){
 }
 
 function displayWinner(player,computer){
- 
   if(player>computer){
     const result=document.querySelector("#result")
     result.textContent="You win!"
     modelcontainer.classList.add("show-modal");
     
   }else{
+    const result=document.querySelector("#result")
     result.textContent="You lose!"
     modelcontainer.classList.add("show-modal");
   }
