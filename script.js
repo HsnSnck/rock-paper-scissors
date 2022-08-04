@@ -12,6 +12,18 @@ const buttons=document.querySelectorAll("button");
 //add Eventlistener
 buttons.forEach(btn => btn.addEventListener('click',playRound));
 
+//modal
+const modelcontainer=document.querySelector(".modal")
+const restart=document.querySelector("#restart");
+restart.addEventListener('click',restartGame);
+
+function restartGame(){
+  playerScore=0;
+  computerScore=0;
+  cScore.textContent=`${computerScore}`;
+  pScore.textContent=`${playerScore}`;
+  modelcontainer.classList.remove("show-modal")
+}
 
 function random() {
   let rand = Math.floor(Math.random() * 3);
@@ -52,16 +64,17 @@ function addPoints(winner){
 }
 
 function displayWinner(player,computer){
+ 
   if(player>computer){
-    result.textContent="You lose!"
+    const result=document.querySelector("#result")
+    result.textContent="You win!"
+    modelcontainer.classList.add("show-modal");
     
   }else{
     result.textContent="You lose!"
+    modelcontainer.classList.add("show-modal");
   }
-  playerScore=0;
-  computerScore=0;
-  cScore.textContent=`${computerScore}`;
-  pScore.textContent=`${playerScore}`;
+  
 
 }
 
